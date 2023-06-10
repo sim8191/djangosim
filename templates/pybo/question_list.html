@@ -1,13 +1,11 @@
-<!-- 메인화면 -->
 {% extends 'base.html' %}
 {% load pybo_filter %}
 {% block content %}
-
 <div class="container my-3">
     <table class="table">
         <thead>
         <tr class="text-center table-dark">
-            <th >번호</th>
+            <th>번호</th>
             <th style="width:50%">제목</th>
             <th>글쓴이</th>
             <th>작성일시</th>
@@ -27,13 +25,13 @@
                 <span class="text-danger small mx-2">{{ question.answer_set.count }}</span>
                 {% endif %}
             </td>
-            <td>{{ question.author.username }}</td>  <!-- 글쓴이 추가 -->
+            <td>{{ question.author.username }}</td>
             <td>{{ question.create_date }}</td>
         </tr>
         {% endfor %}
         {% else %}
         <tr>
-            <td colspan="4">질문이 없습니다.</td>
+            <td colspan="3">질문이 없습니다.</td>
         </tr>
         {% endif %}
         </tbody>
