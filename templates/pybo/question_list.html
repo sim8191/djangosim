@@ -17,7 +17,7 @@
         <tr class="text-center">
             <td>
                 <!-- 번호 = 전체건수 - 시작인덱스 - 현재인덱스 + 1 -->
-                {{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}
+                {{ question_list.start_index|add:forloop.counter0 }}
             </td>
             <td class="text-start">
                 <a href="{% url 'pybo:detail' question.id %}">{{ question.subject }}</a>
